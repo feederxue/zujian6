@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <span class="active">未使用</span>
+            <span>已使用</span>
+            <span>已过期</span>
+        </header>
+        <div class="h1"></div>
+        <section>
+            <div class="red">
+                <div class="top">
+                    <p>
+                        <span>￥</span>
+                        <span class="num">5</span>
+                    </p>
+                    <span>满减卷</span>
+                </div>
+                <div class="bottom">
+                    <p class="condition">使用门槛:1.满100元即可使用;2.本劵适用于所有项目</p>
+                    <p class="time">使用时间:即日起至2016年11月10日</p>
+                </div>
+            </div>
+            <div class="blue">
+                <div class="top">
+                    <p>
+                        <span>￥</span>
+                        <span class="num">5</span>
+                    </p>
+                    <span>满减卷</span>
+                </div>
+                <div class="bottom">
+                    <p class="condition">使用门槛:1.满100元即可使用;2.本劵适用于所有项目</p>
+                    <p class="time">使用时间:即日起至2016年11月10日</p>
+                </div>
+            </div>
+            <div class="pink">
+                <div class="top">
+                    <p>
+                        <span>￥</span>
+                        <span class="num">5</span>
+                    </p>
+                    <span>满减卷</span>
+                </div>
+                <div class="bottom">
+                    <p class="condition">使用门槛:1.满100元即可使用;2.本劵适用于所有项目</p>
+                    <p class="time">使用时间:即日起至2016年11月10日</p>
+                </div>
+            </div>
+            <div class="slateblue">
+                <div class="top">
+                    <p>
+                        <span>￥</span>
+                        <span class="num">5</span>
+                    </p>
+                    <span>满减卷</span>
+                </div>
+                <div class="bottom">
+                    <p class="condition">使用门槛:1.满100元即可使用;2.本劵适用于所有项目</p>
+                    <p class="time">使用时间:即日起至2016年11月10日</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+
+        </footer>
+    </div>
+    <script>
+        var header = document.querySelector('header');
+        var spns = header.querySelectorAll('span');
+
+        spns.forEach((item) => {
+            item.onclick = function() {
+                this.classList.add('active');
+            }
+        })
+    </script>
+</body>
+
+</html>

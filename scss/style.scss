@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+.wrap {
+    @include wh(100%, 100%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .h1 {
+        @include wh(100%, 10px);
+        background: #eee;
+        flex-shrink: 0;
+    }
+}
+
+header {
+    @include wh(100%, 40px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #ccc;
+    flex-shrink: 0;
+    span {
+        height: 99%;
+        line-height: 40px;
+    }
+    .active {
+        color: blue;
+        border-bottom: 1px solid blue;
+    }
+}
+
+section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    >div {
+        @include wh(90%, 150px);
+        margin: 10px auto;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        .top {
+            @include wh(100%, 60%);
+            border-bottom: 2px dashed;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            box-sizing: border-box;
+            font-size: 35px;
+            color: #fff;
+            p {
+                span {
+                    margin: 0 10px;
+                }
+                .num {
+                    font-size: 65px;
+                }
+            }
+        }
+        .bottom {
+            @include wh(100%, 40%);
+            font-size: 14px;
+            text-align: center;
+            p {
+                line-height: 30px;
+            }
+            .condition {
+                color: green;
+            }
+            .time {
+                color: #ccc;
+            }
+        }
+    }
+    .red {
+        .top {
+            background: red;
+        }
+    }
+    .blue {
+        .top {
+            background: blue;
+        }
+    }
+    .pink {
+        .top {
+            background: pink;
+        }
+    }
+    .slateblue {
+        .top {
+            background: slateblue;
+        }
+    }
+}
